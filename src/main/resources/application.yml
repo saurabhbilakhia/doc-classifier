@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: doc-classifier
+  datasource:
+    url: jdbc:postgresql://localhost:5432/docai
+    username: docai
+    password: docai
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    show-sql: false
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 25MB
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+jwt:
+  issuer: docai
+  access-token-ttl-minutes: 30
+  refresh-token-ttl-days: 7
+  secret: replace-this-with-a-strong-secret-in-production-use-env-var
+
+storage:
+  provider: local
+  local:
+    root: ./var/storage
+
+mail:
+  host: localhost
+  port: 1025
+  from: no-reply@docai.local
+  username:
+  password:
+  properties:
+    mail:
+      smtp:
+        auth: false
+        starttls:
+          enable: false
+
+logging:
+  level:
+    com.example.docai: DEBUG
+    org.springframework.security: DEBUG
