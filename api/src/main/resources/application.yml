@@ -54,3 +54,4 @@ logging:
   level:
     com.example.docai: DEBUG
     org.springframework.security: DEBUG
+
