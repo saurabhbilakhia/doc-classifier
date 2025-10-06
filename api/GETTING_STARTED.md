@@ -113,7 +113,7 @@ Then register your admin user and change it back.
 curl -X POST http://localhost:8080/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "saurabh.bilakhia@gmail.com",
+    "email": "s.b@gmail.com",
     "password": "admin123"
   }'
 ```
@@ -124,7 +124,7 @@ curl -X POST http://localhost:8080/api/auth/register \
 curl -X POST http://localhost:8080/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "saurabh.bilakhia@gmail.com",
+    "email": "s.b@gmail.com",
     "password": "admin123"
   }'
 ```
