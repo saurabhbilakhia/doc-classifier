@@ -126,4 +126,19 @@ class AuthService(
 
         return MessageResponse("Password reset successfully")
     }
+
+    @Transactional
+    fun changePassword(request: ChangePasswordRequest, email: String): MessageResponse {
+        val user = userRepo.findByEmail(email)
+            ?: throw IllegalArgumentException("User not found")
+
+        if (!passwordEncoder.matches(request.currentPassword, user.passwordHash)) {
+            throw IllegalArgumentException("Current password is incorrect")
+        }
+
+        user.passwordHash = passwordEncoder.encode(request.newPassword)
+        userRepo.save(user)
+
+        return MessageResponse("Password changed successfully")
+    }
 }

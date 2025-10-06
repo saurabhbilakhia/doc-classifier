@@ -36,4 +36,9 @@ class AuthController(
     fun resetPassword(@Valid @RequestBody request: ResetPasswordRequest): ResponseEntity<MessageResponse> {
         return ResponseEntity.ok(authService.resetPassword(request))
     }
+
+    @PostMapping("/change")
+    fun changePassword(@Valid @RequestBody request: ChangePasswordRequest, principal: java.security.Principal): ResponseEntity<MessageResponse> {
+        return ResponseEntity.ok(authService.changePassword(request, principal.name))
+    }
 }

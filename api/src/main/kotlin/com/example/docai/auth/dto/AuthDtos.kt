@@ -50,4 +50,13 @@ data class ResetPasswordRequest(
     val newPassword: String
 )
 
+data class ChangePasswordRequest(
+    @field:NotBlank(message = "Current password is required")
+    val currentPassword: String,
+
+    @field:NotBlank(message = "New password is required")
+    @field:Size(min = 8, message = "Password must be at least 8 characters")
+    val newPassword: String
+)
+
 data class MessageResponse(val message: String)
