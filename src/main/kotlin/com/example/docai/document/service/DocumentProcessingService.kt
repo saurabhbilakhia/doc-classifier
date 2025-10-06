@@ -84,8 +84,7 @@ class DocumentProcessingService(
                         DataType.CURRENCY -> edp.valueNumber = value.raw
                             .replace(Regex("[^0-9.]"), "")
                             .toBigDecimalOrNull()
-                        DataType.BOOLEAN -> edp.valueString = value.raw.lowercase() in listOf("true", "yes", "1")
-                            .let { if (it) "true" else "false" }
+                        DataType.BOOLEAN -> edp.valueString = let { if (value.raw.lowercase() in listOf("true", "yes", "1")) "true" else "false" }
                         else -> edp.valueString = value.raw
                     }
 

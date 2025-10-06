@@ -26,7 +26,7 @@ class RuleBasedExtractionEngine : ExtractionEngine {
         }
 
         val match = regex.find(text) ?: return null
-        val value = match.groups.getOrNull(1)?.value ?: match.value
+        val value = match.groups[1]?.value ?: match.value
 
         return ExtractedValue(
             raw = value,
