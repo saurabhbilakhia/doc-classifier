@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="603b2719-35d0-43d9-9ec6-7e2f318c8a66" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="603b2719-35d0-43d9-9ec6-7e2f318c8a66" name="Changes" comment="resolve cors error">
+      <change beforePath="$PROJECT_DIR$/api/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759717288018</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="resolve cors error">
+      <option name="closed" value="true" />
+      <created>1759819146650</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759819146650</updated>
+    </task>
+    <task id="LOCAL-00008" summary="resolve cors error">
+      <option name="closed" value="true" />
+      <created>1759819280194</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759819280194</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +176,8 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="resolve cors error" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolve cors error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
