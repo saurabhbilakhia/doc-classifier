@@ -1,7 +1,7 @@
 package com.example.docai.config
 
 import com.example.docai.security.JwtAuthenticationFilter
-import org.springframework.beans.factory.annotation.Value
+import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpMethod
