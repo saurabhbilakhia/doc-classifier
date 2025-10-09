@@ -22,7 +22,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 @EnableMethodSecurity
 class SecurityConfig(
     private val jwtAuthenticationFilter: JwtAuthenticationFilter,
-    @Value("\${cors.allowedorigins}") private val allowedOrigins: List<String>
+    @Value("#{\${cors.allowed-origins}}") private val allowedOrigins: List<String>
 ) {
 
     @Bean
